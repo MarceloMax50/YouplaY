@@ -8177,11 +8177,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuário\\Desktop\\TrabalhoLPI\\TrabalhoLPI-master\\YouPlay2019\\YouPlay2019\\YouPlay2019.csproj",
+      "projectUniqueName": "C:\\Users\\Usuário\\Desktop\\YouplaY\\YouPlay2019\\YouPlay2019\\YouPlay2019.csproj",
       "projectName": "YouPlay2019",
-      "projectPath": "C:\\Users\\Usuário\\Desktop\\TrabalhoLPI\\TrabalhoLPI-master\\YouPlay2019\\YouPlay2019\\YouPlay2019.csproj",
+      "projectPath": "C:\\Users\\Usuário\\Desktop\\YouplaY\\YouPlay2019\\YouPlay2019\\YouPlay2019.csproj",
       "packagesPath": "C:\\Users\\Usuário\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuário\\Desktop\\TrabalhoLPI\\TrabalhoLPI-master\\YouPlay2019\\YouPlay2019\\obj\\",
+      "outputPath": "C:\\Users\\Usuário\\Desktop\\YouplaY\\YouPlay2019\\YouPlay2019\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
