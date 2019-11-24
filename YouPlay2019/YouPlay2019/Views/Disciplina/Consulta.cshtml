@@ -1,0 +1,70 @@
+﻿@model List<YouPlay2019.Models.DisciplinaViewModel>
+@{
+    ViewData["Title"] = "Consulta";
+}
+<header>
+    <h2 class="text-center">Consulta de Disciplinas</h2>
+</header>
+
+
+<div class="table-responsive-lg">
+    <table class="table table-hover table-bordered" id="TabelaID">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Disciplina</th>
+                <th scope="col">Ação</th>
+            </tr>
+            <tr>
+                <th scope="col"></th>
+                <th><input type="text" id="txtColuna2" /></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@item.Codigo</th>
+                    <td>@item.Descricao</td>
+                    <td>
+                        <a href="javascript:editarDisciplina(@item.Codigo)" class="btn btn-primary">Editar</a>
+                        <a href="javascript:apagarDisciplina(@item.Codigo)" class="btn btn-danger">Apagar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#TabelaID').DataTable({
+            "language": {
+                "lengthMenu": "Mostrando _MENU_ registros por página",
+                "zeroRecords": "Nada Encontado",
+                "info": "Exibindo página _PAGE_ de _páginas_",
+                "infoEmpty": "Nenhum registro disponível",
+                "infoFiltered": "(Filtrado de _MAX_ registros totais)"
+            }
+        });
+    });
+    $(function () {
+        $("#TabelaID input").keyup(function () {
+            var index = $(this).parent().index();
+            var nth = "#TabelaID td:nth-child(" + (index + 1).toString() + ")";
+            var valor = $(this).val().toUpperCase();
+            $("#TabelaID tbody tr").show();
+            $(nth).each(function () {
+                if ($(this).text().toUpperCase().indexOf(valor) < 0) {
+                    $(this).parent().hide();
+                }
+            });
+        });
+
+        $("#TabelaID input").blur(function () {
+            $(this).val("");
+        });
+    });
+
+</script>
+
